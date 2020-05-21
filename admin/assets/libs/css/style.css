@@ -6813,3 +6813,7 @@ Media Query
 .logo-img {
     width:120px;
 }
+
+.table-bordered td:last-child {
+    text-align:center;
+}
