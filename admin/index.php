@@ -1,8 +1,25 @@
 <?php 
 
+session_start();
+
 include ('db-connection.php');
+ 
+if($_SESSION["username"] == "admin" && $_SESSION["userpassword"] == "admin123")	
+{
+ 
+echo "Welcome ".$_SESSION["username"]."<br><br>
+<a href='ozel_sayfa.php'>Özel Sayfa</a> | <a href='logout.php'>Çıkış</a>";
+	
+}
+else
+{
+ 
+header("location: login.php");	
+ 
+}
 
 ?>
+
 
 <!doctype html>
 <html lang="en">
