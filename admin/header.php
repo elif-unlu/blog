@@ -24,7 +24,10 @@
                             <span class="badge badge-success">6</span>
                         </a>
                         <div id="submenu-1" class="collapse submenu">
-                            <ul class="nav flex-column">                            
+                            <ul class="nav flex-column">    
+                                <li class="nav-item">
+                                    <a class="nav-link" href="blog-add.php">Blog Add</a>
+                                </li>                        
                                 <li class="nav-item">
                                     <a class="nav-link" href="blog-list.php">Blog List</a>
                                 </li>
