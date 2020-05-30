@@ -12,11 +12,11 @@
                     <div class="dropdown-menu dropdown-menu-right nav-user-dropdown"
                         aria-labelledby="navbarDropdownMenuLink2">
                         <div class="nav-user-info">
-                            <h5 class="mb-0 text-white nav-user-name">Admin</h5>
+                            <h5 class="mb-0 text-white nav-user-name"><?=$_SESSION['username']?></h5>
                         </div>
                         <a class="dropdown-item" href="admin-add.php"><i class="fas fa-user-plus mr-2"></i>Add New Admin</a>
                         <a class="dropdown-item" href="all-admins.php"><i class="fas fa-users mr-2"></i>All Admins</a>
-                        <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                        <a class="dropdown-item" href="logout.php"><i class="fas fa-power-off mr-2"></i>Logout</a>
                     </div>
                 </li>
             </ul>
