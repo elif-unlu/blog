@@ -5,9 +5,6 @@
     session_start();
 
     include ('db-connection.php');
-
-    $blogs = $db->from('blog')
-                ->all();
 ?>
 
 <!doctype html>
@@ -68,7 +65,12 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php  foreach ($blogs as $blog): ?>
+                                            <?php 
+                                                $blogs = $db->from('blog')
+                                                ->all();
+
+                                                foreach ($blogs as $blog): 
+                                            ?>
                                                 <tr>
                                                     <td><?=$blog['title'];?></td>
                                                     <td><?=$blog['short_description'];?></td>

@@ -1,9 +1,8 @@
 <?php 
+    ob_start();
+    session_start();
 
-session_start();
-
-include ('db-connection.php');
-
+    include ('db-connection.php');
 ?>
 
 <!doctype html>
@@ -47,11 +46,32 @@ include ('db-connection.php');
                     </div>
                 </div>
                 <div class="email-compose-fields">
-                    <form>
-                        <div class="form-group">
+                    <?php
+                        if(isset($_POST['send'])){
+
+                            $title                  = $_POST["title"];
+                            $short_description 		= $_POST["short_description"];
+                            $text 			        = $_POST["text"];
+
+                            $blog_add = $db->insert('blog')
+                                            ->set(array(
+                                                'title' => $title,
+                                                'short_description' =>  $short_description,
+                                                'text' => $text,
+                                            ));
+                
+                            if ( !$blog_add ){
+                                echo '<div class="alert alert-danger">An unexpected error occurred.</div>';
+                            } else {
+                                echo '<script language="Javascript">window.location.href="blog-list.php"</script>';
+                            }
+                        }
+                    ?>
+                    <form method="post" action="">
+                        <!-- <div class="form-group">
                             <label for="inputImage" class="col-form-label">Select Image</label>
                             <input type="file" id="inputImage" name="file" class="form-control" accept="image/*">
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <label for="inputText3" class="col-form-label">Title</label>
                             <input id="inputText3" type="text" name="title" class="form-control">
@@ -60,24 +80,28 @@ include ('db-connection.php');
                             <label for="inputText3" class="col-form-label">Short Description</label>
                             <input id="inputText3" type="text" name="short_description" class="form-control">
                         </div>
-                    </form>
-                </div>
-                <div class=" editor">
-                    <div class="col-md-12 p-0">
-                        <div class="form-group">
-                            <label class="control-label sr-only" for="summernote">Descriptions </label>
-                            <textarea class="form-control" id="summernote" name="editordata" name="text" rows="6" placeholder="Write Descriptions"></textarea>
-                        </div>
-                    </div>
-                    <div class=" action-send">
-                        <div class="col-md-12 ">
-                            <div class="form-group">
-                                <button class="btn btn-primary btn-space" type="submit"><i class="icon s7-mail"></i> Save</button>
-                                <button class="btn btn-secondary btn-space" type="button"><i class="icon s7-close"></i>  Cancel</button>
+                        <!-- <div class="form-group">
+                            <label for="inputText3" class="col-form-label">Date</label>
+                            <input id="inputText3" type="date" name="date" class="form-control">
+                        </div> -->
+                        <div class=" editor">
+                            <div class="col-md-12 p-0">
+                                <div class="form-group">
+                                    <label class="control-label sr-only" for="summernote">Descriptions </label>
+                                    <textarea class="form-control" id="summernote" name="text" rows="6" placeholder="Write Descriptions"></textarea>
+                                </div>
+                            </div>
+                            <div class=" action-send">
+                                <div class="col-md-12 ">
+                                    <div class="form-group">
+                                        <button class="btn btn-primary btn-space" name="send" type="submit"><i class="icon s7-mail"></i> Save</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
+                
             </div>
            
             <?php include ('footer.php'); ?>
