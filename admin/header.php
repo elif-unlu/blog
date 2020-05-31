@@ -12,7 +12,7 @@
                     <div class="dropdown-menu dropdown-menu-right nav-user-dropdown"
                         aria-labelledby="navbarDropdownMenuLink2">
                         <div class="nav-user-info">
-                            <h5 class="mb-0 text-white nav-user-name"><?=$_SESSION['username']?></h5>
+                            <h5 class="mb-0 text-white nav-user-name"><?=$_SESSION['fullname']?></h5>
                         </div>
                         <a class="dropdown-item" href="admin-add.php"><i class="fas fa-user-plus mr-2"></i>Add New Admin</a>
                         <a class="dropdown-item" href="admin-list.php"><i class="fas fa-users mr-2"></i>All Admins</a>
