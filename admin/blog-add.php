@@ -52,14 +52,13 @@ include ('db-connection.php');
                             <label for="inputImage" class="col-form-label">Select Image</label>
                             <input type="file" id="inputImage" name="file" class="form-control" accept="image/*">
                         </div>
-
                         <div class="form-group">
                             <label for="inputText3" class="col-form-label">Title</label>
-                            <input id="inputText3" type="text" class="form-control">
+                            <input id="inputText3" type="text" name="title" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="inputText3" class="col-form-label">Short Description</label>
-                            <input id="inputText3" type="text" class="form-control">
+                            <input id="inputText3" type="text" name="short_description" class="form-control">
                         </div>
                     </form>
                 </div>
@@ -67,17 +66,14 @@ include ('db-connection.php');
                     <div class="col-md-12 p-0">
                         <div class="form-group">
                             <label class="control-label sr-only" for="summernote">Descriptions </label>
-                            <textarea class="form-control" id="summernote" name="editordata" rows="6"
-                                placeholder="Write Descriptions"></textarea>
+                            <textarea class="form-control" id="summernote" name="editordata" name="text" rows="6" placeholder="Write Descriptions"></textarea>
                         </div>
                     </div>
                     <div class=" action-send">
                         <div class="col-md-12 ">
                             <div class="form-group">
-                                <button class="btn btn-primary btn-space" type="submit"><i class="icon s7-mail"></i>
-                                    Save</button>
-                                <button class="btn btn-secondary btn-space" type="button"><i class="icon s7-close"></i>
-                                    Cancel</button>
+                                <button class="btn btn-primary btn-space" type="submit"><i class="icon s7-mail"></i> Save</button>
+                                <button class="btn btn-secondary btn-space" type="button"><i class="icon s7-close"></i>  Cancel</button>
                             </div>
                         </div>
                     </div>

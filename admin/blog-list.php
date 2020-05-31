@@ -1,10 +1,13 @@
 
 <?php 
 
-session_start();
+    ob_start();
+    session_start();
 
-include ('db-connection.php');
+    include ('db-connection.php');
 
+    $blogs = $db->from('blog')
+                ->all();
 ?>
 
 <!doctype html>
@@ -65,78 +68,20 @@ include ('db-connection.php');
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>Tiger Nixon</td>
-                                                <td>System Architect</td>
-                                                <td>Edinburgh</td>
-                                                <td>2011/04/25</td>
-                                                <td>
-                                                    <div class="btn-group ml-auto">
-                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
-                                                        <button class="btn btn-sm btn-outline-light">
-                                                            <i class="far fa-trash-alt"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Brielle Williamson</td>
-                                                <td>Integration Specialist</td>
-                                                <td>New York</td>
-                                                <td>2012/12/02</td>
-                                                <td>
-                                                    <div class="btn-group ml-auto">
-                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
-                                                        <button class="btn btn-sm btn-outline-light">
-                                                            <i class="far fa-trash-alt"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Herrod Chandler</td>
-                                                <td>Sales Assistant</td>
-                                                <td>San Francisco</td>
-                                                <td>2012/08/06</td>
-                                                <td>
-                                                    <div class="btn-group ml-auto">
-                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
-                                                        <button class="btn btn-sm btn-outline-light">
-                                                            <i class="far fa-trash-alt"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                         
-                                            <tr>
-                                                <td>Serge Baldwin</td>
-                                                <td>Data Coordinator</td>
-                                                <td>Singapore</td>
-                                                <td>2012/04/09</td>
-                                                <td>
-                                                    <div class="btn-group ml-auto">
-                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
-                                                        <button class="btn btn-sm btn-outline-light">
-                                                            <i class="far fa-trash-alt"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            
-                                            <tr>
-                                                <td>Jennifer Acosta</td>
-                                                <td>Junior Javascript Developer</td>
-                                                <td>Edinburgh</td>
-                                                <td>2013/02/01</td>
-                                                <td>
-                                                    <div class="btn-group ml-auto">
-                                                        <button class="btn btn-sm btn-outline-light">Edit</button>
-                                                        <button class="btn btn-sm btn-outline-light">
-                                                            <i class="far fa-trash-alt"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                            <?php  foreach ($blogs as $blog): ?>
+                                                <tr>
+                                                    <td><?=$blog['title'];?></td>
+                                                    <td><?=$blog['short_description'];?></td>
+                                                    <td>Edinburgh</td>
+                                                    <td>2011/04/25</td>
+                                                    <td>
+                                                        <div class="btn-group ml-auto">
+                                                            <button class="btn btn-sm btn-outline-light">Edit</button>
+                                                            <button class="btn btn-sm btn-outline-light"><i class="far fa-trash-alt"></i></button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            <?php endforeach; ?>
                                         </tbody>
                                     </table>
                                 </div>
