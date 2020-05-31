@@ -60,7 +60,6 @@
                                                 <th>Title</th>
                                                 <th>Short Description</th>
                                                 <th>Writer</th>
-                                                <th>Date</th>
                                                 <th>Operations</th>
                                             </tr>
                                         </thead>
@@ -74,12 +73,11 @@
                                                 <tr>
                                                     <td><?=$blog['title'];?></td>
                                                     <td><?=$blog['short_description'];?></td>
-                                                    <td>Edinburgh</td>
-                                                    <td>2011/04/25</td>
+                                                    <td><?=$blog['writer'];?></td>
                                                     <td>
                                                         <div class="btn-group ml-auto">
-                                                            <button class="btn btn-sm btn-outline-light">Edit</button>
-                                                            <button class="btn btn-sm btn-outline-light"><i class="far fa-trash-alt"></i></button>
+                                                            <a href="blog-edit.php?id=<?=$blog['id']?>" class="btn btn-sm btn-outline-light">Edit</a>
+                                                            <a onclick="return confirm('Are you sure?')" href="blog-delete.php?id=<?=$blog['id']?>" class="btn btn-sm btn-outline-light"><i class="far fa-trash-alt"></i></a>
                                                         </div>
                                                     </td>
                                                 </tr>
