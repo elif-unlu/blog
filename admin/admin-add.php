@@ -1,8 +1,9 @@
 <?php 
 
-session_start();
+    ob_start();
+    session_start();
 
-include ('db-connection.php');
+    include ('db-connection.php');
 
 ?>
 
@@ -47,46 +48,52 @@ include ('db-connection.php');
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="card">
                             <div class="card-body">
-                                <form id="validationform" data-parsley-validate="" novalidate="">
 
+                            <?php
+                                if(isset($_POST['add'])){
+
+                                    $fullname          = $_POST["fullname"];
+                                    $username          = $_POST["username"];
+                                    $password 		   = md5($_POST["password"]);
+
+                                    $admin_add = $db->insert('admins')
+                                                    ->set(array(
+                                                        'fullname' => $fullname,
+                                                        'username' => $username,
+                                                        'password' => $password,
+                                                    ));
+                        
+                                    if ( !$admin_add ){
+                                        echo '<div class="alert alert-danger">An unexpected error occurred.</div>';
+                                    } else {
+                                        echo '<script language="Javascript">window.location.href="admin-list.php"</script>';
+                                    }
+                                }
+                            ?>
+                                <form method="post" action="" id="validationform" data-parsley-validate="" novalidate="">
                                     <div class="form-group row">
                                         <label class="col-12 col-sm-3 col-form-label text-sm-right">Name Surname</label>
                                         <div class="col-12 col-sm-8 col-lg-6">
-                                            <input type="text" required=""  placeholder="Name Surname" class="form-control">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-12 col-sm-3 col-form-label text-sm-right">E-Mail</label>
-                                        <div class="col-12 col-sm-8 col-lg-6">
-                                            <input type="email" required="" data-parsley-type="email" placeholder="E-Mail" class="form-control">
+                                            <input type="text" name="fullname" required  placeholder="Name Surname" class="form-control">
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
                                         <label class="col-12 col-sm-3 col-form-label text-sm-right">Username</label>
                                         <div class="col-12 col-sm-8 col-lg-6">
-                                            <input type="text" required=""  placeholder="Username" class="form-control">
+                                            <input type="text" name="username" required  placeholder="Username" class="form-control">
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
                                         <label class="col-12 col-sm-3 col-form-label text-sm-right">Password</label>
-                                        <div class="col-sm-4 col-lg-3 mb-3 mb-sm-0">
-                                            <input id="pass2" type="password" required="" placeholder="Password"
-                                                class="form-control">
-                                        </div>
-                                        <div class="col-sm-4 col-lg-3">
-                                            <input type="password" required="" data-parsley-equalto="#pass2"
-                                                placeholder="Re-Type Password" class="form-control">
+                                        <div class="col-12 col-sm-8 col-lg-6">
+                                            <input id="pass2" type="password"  name="password" required placeholder="Password" class="form-control">
                                         </div>
                                     </div>
-
-
                                     <div class="form-group row text-right">
                                         <div class="col col-sm-10 col-lg-9 offset-sm-1 offset-lg-0">
-                                            <button type="submit" class="btn btn-space btn-primary">Add</button>
-                                            <button class="btn btn-space btn-secondary">Cancel</button>
+                                            <button type="submit" name="add" class="btn btn-space btn-primary">Add</button>
                                         </div>
                                     </div>
                                 </form>
