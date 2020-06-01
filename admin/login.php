@@ -47,6 +47,7 @@
                         } else {
                             $_SESSION["login"] = true;
                             $_SESSION["username"] = $user['username'];
+                            $_SESSION["fullname"] = $user['fullname'];
                             echo '<script language="Javascript">window.location.href="index.php"</script>';
                         }
                     }
@@ -62,7 +63,6 @@
                     
                     <button type="submit" name="signin" class="btn btn-primary btn-lg btn-block">Sign In</button>
                 </form>
-                <span>If you have forgotten your password, please contact the system admin.</span>
             </div>
            
         </div>
