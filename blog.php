@@ -42,7 +42,7 @@
 
 		<!-- Scroll to top button -->
 		<div class="scrolltotop">
-			<a class="button-circle button-circle-sm button-circle-dark" href="blog-detail"><i class="ti-arrow-up"></i></a>
+			<a class="button-circle button-circle-sm button-circle-dark" href="blog-detail.php"><i class="ti-arrow-up"></i></a>
 		</div>
 		<!-- end Scroll to top button -->
 
@@ -51,95 +51,44 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
-						<!-- Blog Post box 1 -->
-						<div class="margin-bottom-50">
-							<div class="hoverbox-8">
-								<a href="blog-detail">
-									<img src="assets/images/blog-minimal-post-1.jpg" alt="">
-								</a>
-							</div>
-							<div class="margin-top-30">
-								<div class="d-flex justify-content-between margin-bottom-10">
-									<div class="d-inline-flex">
-										<a class="font-family-tertiary font-small font-weight-normal uppercase" href="blog-detail">Lifestyle</a>
+						<?php 
+                            $blogs = $db->from('blog')
+                                    ->all();
+
+                                foreach ($blogs as $blog): 
+                            ?>
+								<div class="margin-bottom-50">
+									<div class="hoverbox-8">
+										<a href="blog-detail.php">
+											<img src="assets/images/blog-minimal-post-1.jpg" alt="">
+										</a>
 									</div>
-									<div class="d-inline-flex">
-										<span class="font-small">Jan 24, 2019</span>
-									</div>
-								</div>
-								<h5><a href="blog-detail">Benefits of Minimalism</a></h5>
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-								<div class="margin-top-20">
-									<a class="text-button button-font-2" href="blog-detail">Read More</a>
-								</div>
-							</div>
-						</div>
-						<!-- Blog Post box 2 -->
-						<div class="margin-bottom-50">
-							<div class="hoverbox-8">
-								<a href="blog-detail">
-									<img src="assets/images/blog-minimal-post-2.jpg" alt="">
-								</a>
-							</div>
-							<div class="margin-top-30">
-								<div class="d-flex justify-content-between margin-bottom-10">
-									<div class="d-inline-flex">
-										<a class="font-family-tertiary font-small font-weight-normal uppercase" href="blog-detail">Knowledge</a>
-									</div>
-									<div class="d-inline-flex">
-										<span class="font-small">Jan 24, 2019</span>
+									<div class="margin-top-30">
+										<h5><a href="blog-detail.php"><?=$blog['title'];?></a></h5>
+										<p><?=$blog['short_description'];?></p>
+										<div class="margin-top-20">
+											<a class="text-button button-font-2" href="blog-detail.php">Read More</a>
+										</div>
 									</div>
 								</div>
-								<h5><a href="blog-detail">10 Books that I will recommend</a></h5>
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-								<div class="margin-top-20">
-									<a class="text-button button-font-2" href="blog-detail">Read More</a>
-								</div>
-							</div>
-						</div>
-						<!-- Blog Post box 3 -->
-						<div class="margin-bottom-50">
-							<div class="hoverbox-8">
-								<a href="blog-detail">
-									<img src="assets/images/blog-minimal-post-3.jpg" alt="">
-								</a>
-							</div>
-							<div class="margin-top-30">
-								<div class="d-flex justify-content-between margin-bottom-10">
-									<div class="d-inline-flex">
-										<a class="font-family-tertiary font-small font-weight-normal uppercase" href="blog-detail">Health</a>
-									</div>
-									<div class="d-inline-flex">
-										<span class="font-small">Jan 24, 2019</span>
-									</div>
-								</div>
-								<h5><a href="blog-detail">Benefits of house plants</a></h5>
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-								<div class="margin-top-20">
-									<a class="text-button button-font-2" href="blog-detail">Read More</a>
-								</div>
-							</div>
-						</div>
-						<!-- Pagination -->
+						<?php endforeach; ?>
+
 						<nav>
 							<ul class="pagination justify-content-center margin-top-70">
-								<li class="page-item"><a class="page-link" href="blog-detail">&laquo;</a></li>
-								<li class="page-item active"><a class="page-link" href="blog-detail">1</a></li>
-								<li class="page-item"><a class="page-link" href="blog-detail">2</a></li>
-								<li class="page-item"><a class="page-link" href="blog-detail">3</a></li>
-								<li class="page-item"><a class="page-link" href="blog-detail">&raquo;</a></li>
+								<li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+								<li class="page-item active"><a class="page-link" href="#">1</a></li>
+								<li class="page-item"><a class="page-link" href="#">2</a></li>
+								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
 							</ul>
 						</nav>
 					</div>
-				</div><!-- end row -->
-			</div><!-- end container -->
+				</div>
+			</div>
 		</div>
-		<!-- end Blog section -->
 
         <?php include ('footer.php'); ?>
 
-
-		<!-- ***** JAVASCRIPTS ***** -->
 		<script src="assets/plugins/jquery.min.js"></script>
 		<script src="assets/plugins/plugins.js"></script>
 		<script src="assets/js/functions.min.js"></script>
