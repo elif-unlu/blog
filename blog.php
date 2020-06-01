@@ -42,7 +42,7 @@
 
 		<!-- Scroll to top button -->
 		<div class="scrolltotop">
-			<a class="button-circle button-circle-sm button-circle-dark" href="blog-detail.php"><i class="ti-arrow-up"></i></a>
+			<a class="button-circle button-circle-sm button-circle-dark" href="blog-detail"><i class="ti-arrow-up"></i></a>
 		</div>
 		<!-- end Scroll to top button -->
 
@@ -54,80 +54,80 @@
 						<!-- Blog Post box 1 -->
 						<div class="margin-bottom-50">
 							<div class="hoverbox-8">
-								<a href="blog-detail.php">
+								<a href="blog-detail">
 									<img src="assets/images/blog-minimal-post-1.jpg" alt="">
 								</a>
 							</div>
 							<div class="margin-top-30">
 								<div class="d-flex justify-content-between margin-bottom-10">
 									<div class="d-inline-flex">
-										<a class="font-family-tertiary font-small font-weight-normal uppercase" href="blog-detail.php">Lifestyle</a>
+										<a class="font-family-tertiary font-small font-weight-normal uppercase" href="blog-detail">Lifestyle</a>
 									</div>
 									<div class="d-inline-flex">
 										<span class="font-small">Jan 24, 2019</span>
 									</div>
 								</div>
-								<h5><a href="blog-detail.php">Benefits of Minimalism</a></h5>
+								<h5><a href="blog-detail">Benefits of Minimalism</a></h5>
 								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
 								<div class="margin-top-20">
-									<a class="text-button button-font-2" href="blog-detail.php">Read More</a>
+									<a class="text-button button-font-2" href="blog-detail">Read More</a>
 								</div>
 							</div>
 						</div>
 						<!-- Blog Post box 2 -->
 						<div class="margin-bottom-50">
 							<div class="hoverbox-8">
-								<a href="blog-detail.php">
+								<a href="blog-detail">
 									<img src="assets/images/blog-minimal-post-2.jpg" alt="">
 								</a>
 							</div>
 							<div class="margin-top-30">
 								<div class="d-flex justify-content-between margin-bottom-10">
 									<div class="d-inline-flex">
-										<a class="font-family-tertiary font-small font-weight-normal uppercase" href="blog-detail.php">Knowledge</a>
+										<a class="font-family-tertiary font-small font-weight-normal uppercase" href="blog-detail">Knowledge</a>
 									</div>
 									<div class="d-inline-flex">
 										<span class="font-small">Jan 24, 2019</span>
 									</div>
 								</div>
-								<h5><a href="blog-detail.php">10 Books that I will recommend</a></h5>
+								<h5><a href="blog-detail">10 Books that I will recommend</a></h5>
 								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
 								<div class="margin-top-20">
-									<a class="text-button button-font-2" href="blog-detail.php">Read More</a>
+									<a class="text-button button-font-2" href="blog-detail">Read More</a>
 								</div>
 							</div>
 						</div>
 						<!-- Blog Post box 3 -->
 						<div class="margin-bottom-50">
 							<div class="hoverbox-8">
-								<a href="blog-detail.php">
+								<a href="blog-detail">
 									<img src="assets/images/blog-minimal-post-3.jpg" alt="">
 								</a>
 							</div>
 							<div class="margin-top-30">
 								<div class="d-flex justify-content-between margin-bottom-10">
 									<div class="d-inline-flex">
-										<a class="font-family-tertiary font-small font-weight-normal uppercase" href="blog-detail.php">Health</a>
+										<a class="font-family-tertiary font-small font-weight-normal uppercase" href="blog-detail">Health</a>
 									</div>
 									<div class="d-inline-flex">
 										<span class="font-small">Jan 24, 2019</span>
 									</div>
 								</div>
-								<h5><a href="blog-detail.php">Benefits of house plants</a></h5>
+								<h5><a href="blog-detail">Benefits of house plants</a></h5>
 								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
 								<div class="margin-top-20">
-									<a class="text-button button-font-2" href="blog-detail.php">Read More</a>
+									<a class="text-button button-font-2" href="blog-detail">Read More</a>
 								</div>
 							</div>
 						</div>
 						<!-- Pagination -->
 						<nav>
 							<ul class="pagination justify-content-center margin-top-70">
-								<li class="page-item"><a class="page-link" href="blog-detail.php">&laquo;</a></li>
-								<li class="page-item active"><a class="page-link" href="blog-detail.php">1</a></li>
-								<li class="page-item"><a class="page-link" href="blog-detail.php">2</a></li>
-								<li class="page-item"><a class="page-link" href="blog-detail.php">3</a></li>
-								<li class="page-item"><a class="page-link" href="blog-detail.php">&raquo;</a></li>
+								<li class="page-item"><a class="page-link" href="blog-detail">&laquo;</a></li>
+								<li class="page-item active"><a class="page-link" href="blog-detail">1</a></li>
+								<li class="page-item"><a class="page-link" href="blog-detail">2</a></li>
+								<li class="page-item"><a class="page-link" href="blog-detail">3</a></li>
+								<li class="page-item"><a class="page-link" href="blog-detail">&raquo;</a></li>
 							</ul>
 						</nav>
 					</div>

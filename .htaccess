@@ -1,0 +1,8 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+RewriteRule ^home.*$ index.php [NC]
+RewriteRule ^blog.*$ blog.php [NC]
+RewriteRule ^blog-detail.*$ blog-detail.php [NC]
+
+
