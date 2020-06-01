@@ -1,0 +1,25 @@
+.sidebar-box .list-category li a {
+    display: block;
+    color: #aaa;
+    padding: 10px 20px;
+}
+
+.sidebar-box .list-category li a.active,
+.sidebar-box .list-category li a:hover  {
+    display: block;
+    background: #1a1b1c;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.sidebar-box .list-category li {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #f5f7f9 !important;
+}
+
+.sidebar-box {
+    border: none;
+    margin-bottom: 0px;
+    padding: 0px; 
+}

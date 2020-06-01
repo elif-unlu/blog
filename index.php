@@ -1,3 +1,12 @@
+<?php 
+
+	ob_start();
+	session_start();
+
+	include ('admin/db-connection.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -19,6 +28,8 @@
 		<link href="assets/plugins/font-awesome/css/all.css" rel="stylesheet">
 		<link href="assets/plugins/themify/themify-icons.min.css" rel="stylesheet">
 		<link href="assets/plugins/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+		<link href="assets/css/custom.css" rel="stylesheet">
+
 	</head>
 	<body data-preloader="2">
 
@@ -374,7 +385,6 @@
 
 		<!-- ***** JAVASCRIPTS ***** -->
 		<script src="assets/plugins/jquery.min.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUma4oJ7_6VbfGNdUYdv6VQ0Ph07Fz0k8"></script>
 		<script src="assets/plugins/plugins.js"></script>
 		<script src="assets/js/functions.min.js"></script>
 	</body>
