@@ -58,6 +58,7 @@
                                                 'title' => $title,
                                                 'short_description' =>  $short_description,
                                                 'text' => $text,
+                                                'writer' => $_SESSION['username'],
                                             ));
                 
                             if ( !$blog_add ){
