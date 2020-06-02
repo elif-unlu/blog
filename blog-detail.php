@@ -59,26 +59,15 @@
            ?>
 
 				<div class="row col-spacing-50">
-					<div class="col-12 col-lg-8 order-lg-2">
+					<div class="col-12 col-lg-12 order-lg-2">
 						<div class="margin-bottom-50">
-							<div class="hoverbox-8">
+							<div class="hoverbox-8 d-flex justify-content-center">
 								<img src="assets/images/blog-minimal-post-1.jpg" alt="">
 							</div>
 							<div class="margin-top-30">
 								<h5><?=$blog['title']?></h5>
 								<p><?=$blog['text']?></p>
 							</div>
-						</div>
-					</div>
-				
-					<div class="col-12 col-lg-4 order-lg-1 sidebar-wrapper">
-						<div class="sidebar-box">
-							<h6 class="font-small font-weight-normal uppercase">BLOGS</h6>
-							<ul class="list-category">
-								<li><a class="active" href="#">Benefits of Minimalism </a></li>
-								<li><a href="#">10 Books that I will recommend</a></li>
-								<li><a href="#">Benefits of house plants</a></li>
-							</ul>
 						</div>
 					</div>
 				</div>
