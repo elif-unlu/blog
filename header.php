@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="home">
+            <a class="navbar-brand" href="index.php">
                 <h5>mono</h5>
             </a>
             <ul class="nav">
