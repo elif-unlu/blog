@@ -42,7 +42,7 @@
 
 		<!-- Scroll to top button -->
 		<div class="scrolltotop">
-			<a class="button-circle button-circle-sm button-circle-dark" href="blog-detail.php"><i class="ti-arrow-up"></i></a>
+			<a class="button-circle button-circle-sm button-circle-dark"><i class="ti-arrow-up"></i></a>
 		</div>
 		<!-- end Scroll to top button -->
 
@@ -59,21 +59,21 @@
                             ?>
 								<div class="margin-bottom-50">
 									<div class="hoverbox-8">
-										<a href="blog-detail.php">
+										<a href="blog-detail.php?id=<?=$blog['id']?>">
 											<img src="assets/images/blog-minimal-post-1.jpg" alt="">
 										</a>
 									</div>
 									<div class="margin-top-30">
-										<h5><a href="blog-detail.php"><?=$blog['title'];?></a></h5>
+										<h5><a href="blog-detail.php?id=<?=$blog['id']?>"><?=$blog['title'];?></a></h5>
 										<p><?=$blog['short_description'];?></p>
 										<div class="margin-top-20">
-											<a class="text-button button-font-2" href="blog-detail.php">Read More</a>
+											<a class="text-button button-font-2" href="blog-detail.php?id=<?=$blog['id']?>">Read More</a>
 										</div>
 									</div>
 								</div>
 						<?php endforeach; ?>
 
-						<nav>
+						<!-- <nav>
 							<ul class="pagination justify-content-center margin-top-70">
 								<li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
 								<li class="page-item active"><a class="page-link" href="#">1</a></li>
@@ -81,7 +81,7 @@
 								<li class="page-item"><a class="page-link" href="#">3</a></li>
 								<li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
 							</ul>
-						</nav>
+						</nav> -->
 					</div>
 				</div>
 			</div>

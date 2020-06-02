@@ -5,9 +5,9 @@
                 <h5>mono</h5>
             </a>
             <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="javascript:void(0)">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.php">Blog</a></li>
                 <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Contact</a></li>
             </ul>
             <button class="nav-toggle-btn">

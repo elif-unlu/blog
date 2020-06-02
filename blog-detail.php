@@ -44,6 +44,20 @@
 		
 		<div class="section">
 			<div class="container">
+
+
+            <?php 
+				$id = $_GET['id'];
+
+				$blog = $db->from('blog')
+							->where('id', $id)
+							->first();
+
+				if (!$blog) {
+					echo '<script language="Javascript">window.location.href="blog.php"</script>';
+				}
+           ?>
+
 				<div class="row col-spacing-50">
 					<div class="col-12 col-lg-8 order-lg-2">
 						<div class="margin-bottom-50">
@@ -51,8 +65,8 @@
 								<img src="assets/images/blog-minimal-post-1.jpg" alt="">
 							</div>
 							<div class="margin-top-30">
-								<h5>Benefits of Minimalism</h5>
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+								<h5><?=$blog['title']?></h5>
+								<p><?=$blog['text']?></p>
 							</div>
 						</div>
 					</div>
