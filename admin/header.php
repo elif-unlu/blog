@@ -7,14 +7,42 @@
         </button>
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto navbar-right-top">
+                <li class="nav-item dropdown connection">
+                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"> <i class="fas fa-fw fa-th"></i> </a>
+                    <ul class="dropdown-menu dropdown-menu-right connection-dropdown">
+                        <li>
+                            <div class="conntection-footer">Quick Actions</div>
+                        </li>
+                        <li class="connection-list">
+                            <div class="row mr-0 ml-0">
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 quick-item">
+                                    <a href="#"><i class="fas fa-cog"></i>
+                                        <span>Website Settings</span></a>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 quick-item">
+                                    <a href="#"><i class="fas fa-thumbtack"></i>
+                                        <span>Custom Texts</span></a>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 quick-item">
+                                    <a href="http://localhost:8888/blog/" target="_blank"><i class="fas fa-link"></i>
+                                        <span>Go to Website</span></a>
+                                </div>
+                            </div>
+                        </li>    
+                    </ul>
+                </li>
                 <li class="nav-item dropdown nav-user">
-                    <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                    <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt=""
+                            class="user-avatar-md rounded-circle"></a>
                     <div class="dropdown-menu dropdown-menu-right nav-user-dropdown"
                         aria-labelledby="navbarDropdownMenuLink2">
                         <div class="nav-user-info">
                             <h5 class="mb-0 text-white nav-user-name"><?=$_SESSION['fullname']?></h5>
                         </div>
-                        <a class="dropdown-item" href="admin-add.php"><i class="fas fa-user-plus mr-2"></i>Add New Admin</a>
+                        <a class="dropdown-item" href="admin-add.php"><i class="fas fa-user-plus mr-2"></i>Add New
+                            Admin</a>
                         <a class="dropdown-item" href="admin-list.php"><i class="fas fa-users mr-2"></i>All Admins</a>
                         <a class="dropdown-item" href="logout.php"><i class="fas fa-power-off mr-2"></i>Logout</a>
                     </div>

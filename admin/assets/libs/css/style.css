@@ -1268,8 +1268,7 @@ Top Header
 .connection-dropdown {}
 
 .connection-list {
-    width: 300px;
-    padding: 20px;
+    width: 380px;
 }
 
 .connection-item {
@@ -6816,4 +6815,28 @@ Media Query
 
 .table-bordered td:last-child {
     text-align:center;
+}
+
+.quick-item {
+    list-style: none;
+    width: 50%;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    padding: 20px 0 10px;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.05);
+}
+
+.quick-item a{
+    text-align: center;
+    display: block;
+}
+
+.quick-item span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
