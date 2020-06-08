@@ -26,9 +26,9 @@
                 <div class="col-6 col-sm-6 col-lg-3">
                     <h6 class="font-small font-weight-normal uppercase">Contact Info</h6>
                     <ul class="list-unstyled">
-                        <li>121 King St, Melbourne VIC 3000</li>
-                        <li>contact@example.com</li>
-                        <li>+(123) 456 789 01</li>
+                        <li><?=$setting['address']?></li>
+                        <li><?=$setting['email']?></li>
+                        <li><?=$setting['phone']?></li>
                     </ul>
                 </div>
             </div>
@@ -37,14 +37,14 @@
 
             <div class="row col-spacing-10">
                 <div class="col-12 col-md-6 text-center text-md-left">
-                    <p> Cpoyright &copy; 2020 Mono | All Rights Reserved.</p>
+                    <p> <?=$custom['custom1']?></p>
                 </div>
                 <div class="col-12 col-md-6 text-center text-md-right">
                     <ul class="list-inline">
-                        <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="javascript:void(0)"><i class="fab fa-pinterest"></i></a></li>
-                        <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="<?=$setting['facebook']?>"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="<?=$setting['twitter']?>"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="<?=$setting['pinterest']?>"><i class="fab fa-pinterest"></i></a></li>
+                        <li><a href="<?=$setting['instagram']?>"><i class="fab fa-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>

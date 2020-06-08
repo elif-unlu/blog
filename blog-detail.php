@@ -5,6 +5,12 @@
 
 	include ('admin/db-connection.php');
 
+	$custom = $db->from('customtext')
+				->first();
+
+	$setting = $db->from('setting')
+				->first();
+
 ?>
 
 <!DOCTYPE html>

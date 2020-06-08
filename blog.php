@@ -4,6 +4,12 @@
 	session_start();
 
 	include ('admin/db-connection.php');
+	
+	$custom = $db->from('customtext')
+				->first();
+
+	$setting = $db->from('setting')
+				->first();
 
 ?>
 
