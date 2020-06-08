@@ -17,7 +17,7 @@
                         <li class="connection-list">
                             <div class="row mr-0 ml-0">
                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 quick-item">
-                                    <a href="#"><i class="fas fa-cog"></i>
+                                    <a href="web-settings.php"><i class="fas fa-cog"></i>
                                         <span>Website Settings</span></a>
                                 </div>
                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 quick-item">
