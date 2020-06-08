@@ -82,7 +82,7 @@
                                         ));
 
                         if($settings){
-                            echo '<div class="alert alert-success">Site Ayarları Başarıyla Düzenlendi.</div>';
+                            echo '<div class="alert alert-success">Website settings are successfully edit.</div>';
                         } else {
                             echo '<div class="alert alert-danger">An unexpected error occurred.</div>';
                         }

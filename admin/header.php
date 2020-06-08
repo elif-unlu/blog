@@ -21,7 +21,7 @@
                                         <span>Website Settings</span></a>
                                 </div>
                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 quick-item">
-                                    <a href="#"><i class="fas fa-thumbtack"></i>
+                                    <a href="custom-text.php"><i class="fas fa-thumbtack"></i>
                                         <span>Custom Texts</span></a>
                                 </div>
                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 quick-item">
