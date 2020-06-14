@@ -49,7 +49,30 @@
                     <?php
                         $id = $_GET['id'];
 
+                        $blog = $db->from('blog')
+                            ->where('id', $id)
+                            ->first();
+
+                        if (!$blog) {
+                            echo '<script language="Javascript">window.location.href="blog-list.php"</script>';
+                        }
+
                         if(isset($_POST['send'])){
+
+                            if(($_FILES['file']['name'] !== '')){
+                                // file upload
+                              $file_name = $_FILES['file']['name'];
+                              $file_size = $_FILES['file']['size'];
+                              $file_tmp = $_FILES['file']['tmp_name'];
+                              $file_type = $_FILES['file']['type'];
+                              $file_ext = strtolower(end(explode('.',$_FILES['file']['name'])));
+  
+                              $new_file_name = time().'.'. $file_ext;
+  
+                              move_uploaded_file($file_tmp, "../files/".$new_file_name);
+                              // file upload end
+                            }
+  
 
                             $title                  = $_POST["title"];
                             $short_description 		= $_POST["short_description"];
@@ -62,6 +85,7 @@
                                                 'short_description' =>  $short_description,
                                                 'text' => $text,
                                                 'writer' => $_SESSION['username'],
+                                                'image' => isset($new_file_name) ? $new_file_name : $blog['image'],
                                             ));
                 
                             if ( !$blog_add ){
@@ -70,27 +94,28 @@
                                 echo '<script language="Javascript">window.location.href="blog-list.php"</script>';
                             }
                         }
-
-                        $blog = $db->from('blog')
-                            ->where('id', $id)
-                            ->first();
-
-                        if (!$blog) {
-                            echo '<script language="Javascript">window.location.href="blog-list.php"</script>';
-                        }
                     ?>
-                    <form method="post" action="">
-                        <!-- <div class="form-group">
+                    <form method="post" action="" enctype="multipart/form-data">
+                        <?php
+                        if ($blog["image"] !== NULL) { ?>
+                        <div class="form-group">
+                            <label for="inputImage" class="col-form-label"> Image :</label><br>
+                             <img src="../files/<?=$blog['image']?>" width="150" class="thumbnail">
+                        </div>
+                        <? } ?>
+                        <div class="form-group">
                             <label for="inputImage" class="col-form-label">Select Image</label>
                             <input type="file" id="inputImage" name="file" class="form-control" accept="image/*">
-                        </div> -->
+                        </div>
                         <div class="form-group">
                             <label for="inputText3" class="col-form-label">Title</label>
-                            <input id="inputText3" type="text" value="<?=$blog['title']?>" name="title" class="form-control">
+                            <input id="inputText3" type="text" value="<?=$blog['title']?>" name="title"
+                                class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="inputText3" class="col-form-label">Short Description</label>
-                            <input id="inputText3" type="text" name="short_description" value="<?=$blog['short_description']?>" class="form-control">
+                            <input id="inputText3" type="text" name="short_description"
+                                value="<?=$blog['short_description']?>" class="form-control">
                         </div>
                         <!-- <div class="form-group">
                             <label for="inputText3" class="col-form-label">Date</label>
@@ -113,11 +138,11 @@
                         </div>
                     </form>
                 </div>
-                
+
             </div>
-           
+
             <?php include ('footer.php'); ?>
-         
+
         </div>
     </div>
 

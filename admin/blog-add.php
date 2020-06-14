@@ -49,9 +49,24 @@
                     <?php
                         if(isset($_POST['send'])){
 
+                            // file upload
+                            if(($_FILES['file']['name'] !== '')){
+
+                              $file_size = $_FILES['file']['size'];
+                              $file_tmp = $_FILES['file']['tmp_name'];
+                              $file_type = $_FILES['file']['type'];
+                              $file_ext = strtolower(end(explode('.',$_FILES['file']['name'])));
+  
+                              $new_file_name = time().'.'. $file_ext;
+  
+                              move_uploaded_file($file_tmp, "../files/".$new_file_name);
+                            }
+                            // file upload end
+
                             $title                  = $_POST["title"];
                             $short_description 		= $_POST["short_description"];
                             $text 			        = $_POST["text"];
+
 
                             $blog_add = $db->insert('blog')
                                             ->set(array(
@@ -59,6 +74,7 @@
                                                 'short_description' =>  $short_description,
                                                 'text' => $text,
                                                 'writer' => $_SESSION['username'],
+                                                'image' => isset($new_file_name) ? $new_file_name : NULL,
                                             ));
                 
                             if ( !$blog_add ){
@@ -68,11 +84,12 @@
                             }
                         }
                     ?>
-                    <form method="post" action="">
-                        <!-- <div class="form-group">
+
+                    <form method="post" action="" enctype="multipart/form-data">
+                        <div class="form-group">
                             <label for="inputImage" class="col-form-label">Select Image</label>
                             <input type="file" id="inputImage" name="file" class="form-control" accept="image/*">
-                        </div> -->
+                        </div>
                         <div class="form-group">
                             <label for="inputText3" class="col-form-label">Title</label>
                             <input id="inputText3" type="text" name="title" class="form-control">
